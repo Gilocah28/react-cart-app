@@ -1,0 +1,36 @@
+@import "./variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  font-size: $fontRedHAtText;
+  background-color: $Rose100;
+  margin: 60px;
+  font-family: $fontRedHAtText;
+}
+
+.App {
+  border: 1px solid black;
+
+  .main-container {
+    display: flex;
+
+    .item-list-container {
+      border: 1px solid red;
+      flex: 2;
+    }
+
+    .cart-item-container {
+      border: 1px solid blue;
+      flex: 1;
+    }
+  }
+}
