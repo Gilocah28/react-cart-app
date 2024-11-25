@@ -1,0 +1,36 @@
+@import "../../../Style/variable";
+
+.item-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+
+  .item-container {
+    max-width: 400px;
+  }
+
+  .cart-image-container {
+    img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+    margin: 25px 0;
+  }
+
+  .cart-details-container {
+    .category {
+      color: $Rose400;
+      font-weight: 400;
+    }
+    .name {
+      color: $Rose900;
+      font-weight: 700;
+    }
+    .price {
+      color: $Red;
+      font-weight: 400;
+    }
+  }
+}

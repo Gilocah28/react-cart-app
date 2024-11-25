@@ -8,6 +8,7 @@ const App = () => {
     <div className="App">
       <div className="main-container">
         <ItemList />
+        
         <CartItems />
       </div>
     </div>

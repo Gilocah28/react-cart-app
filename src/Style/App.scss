@@ -11,20 +11,17 @@
 body {
   max-width: 1440px;
   height: 100vh;
-  font-size: $fontRedHAtText;
+  font-size: 16px;
   background-color: $Rose100;
   margin: 60px;
   font-family: $fontRedHAtText;
 }
 
 .App {
-  border: 1px solid black;
-
   .main-container {
     display: flex;
 
     .item-list-container {
-      border: 1px solid red;
       flex: 2;
     }
 
