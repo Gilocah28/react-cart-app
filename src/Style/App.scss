@@ -1,4 +1,5 @@
 @import "./variable";
+@import "./media";
 
 * {
   margin: 0;
@@ -15,18 +16,28 @@ body {
   background-color: $Rose100;
   margin: 60px;
   font-family: $fontRedHAtText;
+  @include laptop {
+    margin: 10px;
+  }
 }
 
 .App {
   .main-container {
     display: flex;
 
+    @include laptop {
+      flex-direction: column;
+    }
+
     .item-list-container {
       flex: 2;
+
+      @include laptop {
+        flex: 1;
+      }
     }
 
     .cart-item-container {
-      border: 1px solid blue;
       flex: 1;
     }
   }

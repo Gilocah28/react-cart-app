@@ -5,12 +5,14 @@ import LocalDataItem from "../Data/LocalDataItems.js";
 const DataItemProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [itemCart, setItemCart] = useState([]);
+  const [isContainer, setIsContainer] = useState(false);
 
-  useEffect(() => setCartItems(LocalDataItem), [itemCart]);
-  console.log(itemCart)
+  useEffect(() => setCartItems(LocalDataItem), []);
 
   return (
-    <DataItemContext.Provider value={{ cartItems, itemCart, setItemCart }}>
+    <DataItemContext.Provider
+      value={{ cartItems, itemCart, setItemCart, isContainer, setIsContainer }}
+    >
       {children}
     </DataItemContext.Provider>
   );

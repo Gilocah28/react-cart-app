@@ -1,4 +1,7 @@
 @import "../../../Style/variable";
+@import "../../../Style/media";
+
+
 
 .item-list-container {
   display: grid;
@@ -6,9 +9,24 @@
   gap: 10px;
   padding: 10px;
 
+  @include smallMonitor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include laptop {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
   .item-container {
     max-width: 400px;
     min-width: 200px;
+
+    @include laptop {
+      max-width: 600px;
+
+      min-width: 300px;
+    }
 
     .cart-image-container {
       position: relative;
@@ -17,7 +35,10 @@
         position: absolute;
         left: 50%;
         bottom: 0;
-        transform: translate(-50%, 25%);
+        transform: translate(-61%, 25%);
+        @include laptop {
+          transform: translate(-50%, 25%);
+        }
 
         button {
           display: flex;
@@ -70,6 +91,11 @@
       width: 100%;
       max-width: 250px;
       border-radius: 10px;
+
+      @include laptop {
+        max-width: 450px;
+        object-fit: cover;
+      }
     }
     margin: 25px 0;
   }

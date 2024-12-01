@@ -6,7 +6,9 @@ import "./Style/App.scss";
 const App = () => {
   return (
     <div className="App">
+      
       <div className="main-container">
+        
         <ItemList />
         
         <CartItems />

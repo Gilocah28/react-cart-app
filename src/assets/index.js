@@ -47,8 +47,14 @@ import cartImage from "./Image/icon-add-to-cart.svg";
 import addCart from "./Image/icon-add-to-cart.svg";
 import cartIncrement from "./Image/icon-increment-quantity.svg";
 import cartDecrement from "./Image/icon-decrement-quantity.svg";
+import emptyImg from "./Image/illustration-empty-cart.svg";
+import removeIcon from "./Image/icon-remove-item.svg";
+import carbonIcon from "./Image/icon-carbon-neutral.svg";
 
 export {
+  carbonIcon,
+  removeIcon,
+  emptyImg,
   cartIncrement,
   cartDecrement,
   waffleDesktop,
