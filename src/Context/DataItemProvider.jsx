@@ -4,10 +4,12 @@ import LocalDataItem from "../Data/LocalDataItems.js";
 
 const DataItemProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [itemCart, setItemCart] = useState([]);
+
   useEffect(() => setCartItems(LocalDataItem), []);
 
   return (
-    <DataItemContext.Provider value={{ cartItems }}>
+    <DataItemContext.Provider value={{ cartItems, itemCart, setItemCart }}>
       {children}
     </DataItemContext.Provider>
   );

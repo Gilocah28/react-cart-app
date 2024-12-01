@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import DataItemContext from "../../Context/DataItemContext";
 import "./Style/ItemList.scss";
+import HandleButton from "./HandleButton";
 
 const ItemList = () => {
   const { cartItems } = useContext(DataItemContext);
-  console.log(cartItems);
 
   return (
     <>
@@ -14,6 +14,7 @@ const ItemList = () => {
             <div key={cartItem.id} className="item-container">
               <div className="cart-image-container">
                 <img src={cartItem.image.desktop} alt={cartItem.category} />
+                <HandleButton cartItem={cartItem} />
               </div>
               <div className="cart-details-container">
                 <p className="category">{cartItem.category}</p>

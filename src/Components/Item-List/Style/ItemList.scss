@@ -8,6 +8,61 @@
 
   .item-container {
     max-width: 400px;
+    min-width: 200px;
+
+    .cart-image-container {
+      position: relative;
+
+      .btn-cart {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 25%);
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          img {
+            width: 20px;
+          }
+          padding: 10px;
+          width: 160px;
+          border-radius: 10px;
+          cursor: pointer;
+          border: 1px solid $Red;
+          color: $Rose900;
+
+          &:hover {
+            color: $Red;
+          }
+        }
+
+        .cartAddDelete {
+          background-color: $Red;
+          color: $Rose100;
+          justify-content: space-between;
+          border: none;
+
+          &:hover {
+            color: $Rose100;
+          }
+
+          img {
+            width: 20px;
+            border: 1px solid $Rose100;
+            padding: 5px;
+            border-radius: 50%;
+            height: 20px;
+
+            &:hover {
+              background-color: $Rose100;
+              filter: grayscale(100%);
+            }
+          }
+        }
+      }
+    }
   }
 
   .cart-image-container {

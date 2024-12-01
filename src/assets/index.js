@@ -44,8 +44,13 @@ import pannaCottaTablet from "./Image/image-panna-cotta-tablet.jpg";
 import pannaCottaThumbnail from "./Image/image-panna-cotta-thumbnail.jpg";
 
 import cartImage from "./Image/icon-add-to-cart.svg";
+import addCart from "./Image/icon-add-to-cart.svg";
+import cartIncrement from "./Image/icon-increment-quantity.svg";
+import cartDecrement from "./Image/icon-decrement-quantity.svg";
 
 export {
+  cartIncrement,
+  cartDecrement,
   waffleDesktop,
   waffleMobile,
   waffleTable,
@@ -82,5 +87,6 @@ export {
   pannaCottaMobile,
   pannaCottaTablet,
   pannaCottaThumbnail,
-  cartImage
+  cartImage,
+  addCart,
 };
