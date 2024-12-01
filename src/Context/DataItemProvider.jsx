@@ -6,7 +6,8 @@ const DataItemProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [itemCart, setItemCart] = useState([]);
 
-  useEffect(() => setCartItems(LocalDataItem), []);
+  useEffect(() => setCartItems(LocalDataItem), [itemCart]);
+  console.log(itemCart)
 
   return (
     <DataItemContext.Provider value={{ cartItems, itemCart, setItemCart }}>

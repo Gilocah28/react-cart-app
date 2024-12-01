@@ -1,39 +1,13 @@
-import React, { useContext, useEffect } from "react";
-import { addCart, cartIncrement, cartDecrement } from "../../assets";
+import React, { useContext } from "react";
+import { cartIncrement, cartDecrement } from "../../assets";
 
 import DataItemContext from "../../Context/DataItemContext";
+import HandleAddToCart from "./Button/HandleAddToCart";
+import HandleIncrement from "./Button/HandleIncrement";
+import HandleDecrement from "./Button/HandleDecrement";
 
 const HandleButton = ({ cartItem }) => {
-  const { itemCart, setItemCart, cartItems } = useContext(DataItemContext);
-
-  const handleAddItemToCart = (id) => {
-    const item = cartItems.find((item) => item.id === id);
-    setItemCart((prev) => {
-      const existingItem = prev.find((cartItem) => cartItem.id === id);
-
-      if (existingItem) {
-        return prev.map((item) => {
-          item.id === id ? { ...item, amount: item.amount + 1 } : item;
-        });
-      }
-
-      return [...prev, { ...item, amount: 1 }];
-    });
-
-    console.log(itemCart);
-  };
-
-  const handleIncrementItem = (id) => {
-    setItemCart((prev) => {
-      return prev.map((item) =>
-        item.id === id ? { ...item, amount: item.amount + 1 } : item
-      );
-    });
-
-    console.log(itemCart);
-  };
-
-  const handleRemoveItemToCart = (id) => {};
+  const { itemCart } = useContext(DataItemContext);
 
   const isItemInCart = itemCart.some((item) => item.id === cartItem.id);
   const itemQuantity =
@@ -42,19 +16,12 @@ const HandleButton = ({ cartItem }) => {
   return (
     <div className="btn-cart">
       {!isItemInCart ? (
-        <button onClick={() => handleAddItemToCart(cartItem.id)}>
-          <img src={addCart} alt="icon" />
-          Add to Cart
-        </button>
+        <HandleAddToCart cartItem={cartItem} />
       ) : (
         <button className="cartAddDelete">
-          <img src={cartDecrement} alt="icon" />
+          <HandleDecrement cartItem={cartItem} />
           {itemQuantity}
-          <img
-            src={cartIncrement}
-            alt="name"
-            onClick={() => handleIncrementItem(cartItem.id)}
-          />
+          <HandleIncrement cartItem={cartItem} />
         </button>
       )}
     </div>
